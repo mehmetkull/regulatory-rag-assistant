@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------
+# Model ağırlıkları — asla işlenmez.
+# GGUF dosyaları ile gömme/sıralayıcı kontrol noktaları gigabaytlarcadır ve
+# kapalı ağdaki sunucuya sürüm kontrolü üzerinden değil, elden aktarılır.
+# ---------------------------------------------------------------------------
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.onnx
+
+# ---------------------------------------------------------------------------
+# Korpus ve türetilmiş indeksler — asla işlenmez.
+# Kaynak belgeler kurum içidir; vektör deposu ise onlardan açılışta yeniden
+# üretilen türetilmiş veridir.
+# ---------------------------------------------------------------------------
+data/
+corpus/
+*.chroma
+chroma.sqlite3
+embeddings/
+
+# ---------------------------------------------------------------------------
+# Gizli bilgiler ve ortama özgü yapılandırma
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+config/config.local.yaml
+config/*.secret.yaml
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node ve araçlar
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Günlükler ve çalışma anı çıktıları
+logs/
+*.log
+cache/
+tmp/
+
+# Düzenleyiciler ve işletim sistemi
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
